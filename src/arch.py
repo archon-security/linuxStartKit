@@ -7,8 +7,8 @@ varend="\033[m"
 os.system("clear")
 
 def main():
-    banner = open("banner.txt", "r").read()
-    print("{}{}{}{}".format(varstart, banner, negrito, varend))
+    banner = open("../banner.txt", "r").read()
+    print("{}{}{}{}".format(varstart, negrito, banner, varend))
     print("A caceta desse programa tem como intuito fazer a configuraçção inicial do seu linux\n\n")
     print("     1 - Instalação completa de programas recomendados")
     sleep(1.0)
@@ -35,7 +35,7 @@ def installPackages():
     
 def packageList():
     print("Criando txt com lista de pacotes do sistema")
-    os.system("mkdir backup | cd backup | pacman -Q > arch_packages.txt")
+    os.system("pacman -Q > arch_packages.txt")
     
 
 main()
