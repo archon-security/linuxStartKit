@@ -1,0 +1,4 @@
+git
+go
+firefox
+gzip
