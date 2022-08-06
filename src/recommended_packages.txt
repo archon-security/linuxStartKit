@@ -1,3 +1,5 @@
+archlinux-keyring
+tar
 git
 go
 firefox

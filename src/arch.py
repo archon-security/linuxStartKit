@@ -26,7 +26,7 @@ def main():
 
 def installCompl():
     print("Instalando programas")
-    os.system("sudo pacman -Sy --needed - <recommended_packages.txt --noconfir")
+    os.system("sudo pacman -Sy --needed - <recommended_packages.txt --noconfirm")
     
 def installPackages():
     print("Instalando pacotes apartir da lista de backup")
@@ -36,6 +36,10 @@ def installPackages():
 def packageList():
     print("Criando txt com lista de pacotes do sistema")
     os.system("pacman -Q > arch_packages.txt")
+    print("Lista de pacotes completo.")
+    os.system("tar -cjf pacman_database.tar.bz2 /var/lib/pacman/local")
+    print("Backup da base de dados do pacman realizado.")
+    print("Caso queira restaurar a base de dados, basta move o arquivo \033[0;31m pacman_database.tar.bz2\033[m para o diretorio \033[0;31m /\033[m  e depois dar o comando \033[0;31m tar -xjvf pacman_database.tar.bz2\033[m")
     
 
 main()
