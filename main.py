@@ -4,9 +4,9 @@ from time import sleep
 def vefOs():
     os = platform.platform()
     if 'ARCH' or 'MANJARO' in os.upper():
-        exec(open("arch.py").read())
+        exec(open("src/arch.py").read())
     elif 'DEBIAN' or 'UBUNTU' in os.upper():
-        exec(open("debian.py").read())
+        exec(open("src/debian.py").read())
 
 varstart="\033[1;32m"
 negrito="\033[1m"
