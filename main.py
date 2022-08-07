@@ -1,6 +1,6 @@
-import os, platform
+import platform
+from os import system as sys
 from time import sleep
-sys = os.system
 
 def vefOs():
     so = platform.platform()

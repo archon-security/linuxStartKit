@@ -1,10 +1,10 @@
-import os
+from os import system as sys
 from time import sleep
 
 varstart="\033[1;32m"
 negrito="\033[1m"
 varend="\033[m"
-os.system("clear")
+sys("clear")
 
 def main():
     banner = open("banner.txt", "r").read()
@@ -26,18 +26,18 @@ def main():
 
 def installCompl():
     print("Instalando programas")
-    os.system("sudo pacman -Sy --needed - <rec_packages_arch.txt --noconfirm")
+    sys("sudo pacman -Sy --needed - <rec_packages_arch.txt --noconfirm")
     
 def installPackages():
     print("Instalando pacotes apartir da lista de backup")
-    os.system("sudo pacman -Sy --needed - <arch_packages.txt")
+    sys("sudo pacman -Sy --needed - <arch_packages.txt")
     
     
 def packageList():
     print("Criando txt com lista de pacotes do sistema")
-    os.system("pacman -Q > arch_packages.txt")
+    sys("pacman -Q > arch_packages.txt")
     print("Lista de pacotes completo.")
-    os.system("tar -cjf pacman_database.tar.bz2 /var/lib/pacman/local")
+    sys("tar -cjf pacman_database.tar.bz2 /var/lib/pacman/local")
     print("Backup da base de dados do pacman realizado.")
     print("Caso queira restaurar a base de dados, basta move o arquivo \033[0;31m pacman_database.tar.bz2\033[m para o diretorio \033[0;31m /\033[m  e depois dar o comando \033[0;31m tar -xjvf pacman_database.tar.bz2\033[m")
     

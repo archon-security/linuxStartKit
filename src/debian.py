@@ -1,9 +1,9 @@
-import os
+from os import system as sys
 from time import sleep
 varstart = '\033[1;32m'
 negrito = '\033[1m'
 varend = '\033[m'
-os.system('clear')
+sys('clear')
 
 
 def main():
