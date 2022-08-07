@@ -1,6 +1,5 @@
 import os, platform
 from time import sleep
-from xml.etree.ElementInclude import include
 sys = os.system
 
 def vefOs():
