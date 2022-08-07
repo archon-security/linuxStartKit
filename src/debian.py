@@ -7,7 +7,7 @@ os.system('clear')
 
 
 def main():
-    banner = open("../banner.txt","r").read()
+    banner = open("banner.txt","r").read()
     print("{}{}{}{}".format(varstart, negrito,banner, varend))
     print("A caceta desse programa tem como intuito fazer a configuração inicial do seu Linux\n\n")
     print("     1 - Instalação completa de programas recomendados")
